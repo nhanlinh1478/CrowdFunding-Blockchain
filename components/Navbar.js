@@ -73,7 +73,7 @@ export default function NavBar() {
                   zIndex: -1,
                 }}
               >
-                <NextLink href="/">🤝BetterFund</NextLink>
+                <NextLink href="/">CrowdFunding-Ethereum</NextLink>
               </Box>
             </Heading>
           </Flex>
@@ -92,15 +92,6 @@ export default function NavBar() {
             >
               <NextLink href="/campaign/new">Create Campaign</NextLink>
             </Button>
-            <Button
-              fontSize={"md"}
-              fontWeight={600}
-              variant={"link"}
-              display={{ base: "none", md: "inline-flex" }}
-            >
-              <NextLink href="/#howitworks"> How it Works</NextLink>
-            </Button>
-
             {wallet.status === "connected" ? (
               <Menu>
                 <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>

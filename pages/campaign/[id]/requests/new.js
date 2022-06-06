@@ -73,11 +73,6 @@ export default function NewRequest() {
 
   return (
     <div>
-      <Head>
-        <title>Create a Withdrawal Request</title>
-        <meta name="description" content="Create a Withdrawal Request" />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
       <main>
         <Stack spacing={8} mx={"auto"} maxW={"2xl"} py={12} px={6}>
           <Text fontSize={"lg"} color={"teal.400"} justifyContent="center">
@@ -87,7 +82,7 @@ export default function NewRequest() {
             </NextLink>
           </Text>
           <Stack>
-            <Heading fontSize={"4xl"}>Create a Withdrawal Request 💸</Heading>
+            <Heading fontSize={"4xl"}>Create a Withdrawal Request </Heading>
           </Stack>
           <Box
             rounded={"lg"}

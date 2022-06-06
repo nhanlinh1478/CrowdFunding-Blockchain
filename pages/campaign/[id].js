@@ -156,11 +156,6 @@ export default function CampaignSingle({
 
   return (
     <div>
-      <Head>
-        <title>Campaign Details</title>
-        <meta name="description" content="Create a Withdrawal Request" />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
       {isSubmitted ? <Confetti width={width} height={height} /> : null}
       <main>
         {" "}
@@ -176,7 +171,7 @@ export default function CampaignSingle({
                 <AlertIcon />
                 <AlertDescription mr={2}>
                   {" "}
-                  Thank You for your Contribution 🙏
+                  Thank You for your Contribution
                 </AlertDescription>
                 <CloseButton
                   position="absolute"
@@ -225,30 +220,18 @@ export default function CampaignSingle({
                       ETHPrice,
                       minimumContribution
                     )})`}
-                    info={
-                      "You must contribute at least this much in Wei ( 1 ETH = 10 ^ 18 Wei) to become an approver"
-                    }
                   />
                   <StatsCard
                     title={"Wallet Address of Campaign Creator"}
                     stat={manager}
-                    info={
-                      "The Campaign Creator created the campaign and can create requests to withdraw money."
-                    }
                   />
                   <StatsCard
                     title={"Number of Requests"}
                     stat={requestsCount}
-                    info={
-                      "A request tries to withdraw money from the contract. Requests must be approved by approvers"
-                    }
                   />
                   <StatsCard
                     title={"Number of Approvers"}
                     stat={approversCount}
-                    info={
-                      "Number of people who have already donated to this campaign"
-                    }
                   />
                 </SimpleGrid>
               </Box>
@@ -288,11 +271,6 @@ export default function CampaignSingle({
                       maxW={{ base: "	15rem", sm: "sm" }}
                       pt="2"
                     >
-                      <Text as="span" fontWeight={"bold"}>
-                        {balance > 0
-                          ? web3.utils.fromWei(balance, "ether")
-                          : "0, Become a Donor 😄"}
-                      </Text>
                       <Text
                         as="span"
                         display={balance > 0 ? "inline" : "none"}

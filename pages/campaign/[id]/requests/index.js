@@ -194,7 +194,7 @@ const RequestRow = ({
         </Tooltip>
         {request.complete ? (
           <Tooltip
-              label="This Request has been finalized & withdrawn to the recipient,it may then have less no of approvers"
+            label="This Request has been finalized & withdrawn to the recipient,it may then have less no of approvers"
             bg={useColorModeValue("white", "gray.700")}
             placement={"top"}
             color={useColorModeValue("gray.800", "white")}
@@ -282,12 +282,6 @@ export default function Requests({
 
   return (
     <div>
-      <Head>
-        <title>Campaign Withdrawal Requests</title>
-        <meta name="description" content="Create a Withdrawal Request" />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
-
       <main>
         <Container px={{ base: "4", md: "12" }} maxW={"7xl"} align={"left"}>
           <Flex flexDirection={{ base: "column", md: "row" }} py={4}>
@@ -301,12 +295,6 @@ export default function Requests({
             </Box>
             <Spacer />
             <Box py="4">
-              Campaign Balance :{" "}
-              <Text as="span" fontWeight={"bold"} fontSize="lg">
-                {balance > 0
-                  ? web3.utils.fromWei(balance, "ether")
-                  : "0, Become a Donor 😄"}
-              </Text>
               <Text
                 as="span"
                 display={balance > 0 ? "inline" : "none"}
@@ -431,14 +419,6 @@ export default function Requests({
               }
             >
               <SimpleGrid row spacing={2} align="center">
-                <Stack align="center">
-                  <NextImage
-                    src="/static/no-requests.png"
-                    alt="no-request"
-                    width="150"
-                    height="150"
-                  />
-                </Stack>
                 <Heading
                   textAlign={"center"}
                   color={useColorModeValue("gray.800", "white")}
@@ -453,7 +433,7 @@ export default function Requests({
                   fontSize="sm"
                 >
                   Create a Withdrawal Request to Withdraw funds from the
-                  Campaign😄
+                  Campaign
                 </Text>
 
                 <Button
