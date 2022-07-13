@@ -90,7 +90,9 @@ export default function NewCampaign() {
             <NextLink href="/"> Back to Home</NextLink>
           </Text>
           <Stack>
-            <Heading fontSize={"4xl"}>Create a New Campaign</Heading>
+            <Heading fontSize={"5xl"} ml={9}>
+              Create a New Campaign
+            </Heading>
           </Stack>
           <Box
             rounded={"lg"}
@@ -101,7 +103,7 @@ export default function NewCampaign() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <Stack spacing={4}>
                 <FormControl id="minimumContribution">
-                  <FormLabel>Minimum Contribution Amount</FormLabel>
+                  <FormLabel>Minimum Amount</FormLabel>
                   <InputGroup>
                     {" "}
                     <Input
@@ -136,7 +138,7 @@ export default function NewCampaign() {
                   />
                 </FormControl>
                 <FormControl id="imageUrl">
-                  <FormLabel>Image URL</FormLabel>
+                  <FormLabel>Image Link</FormLabel>
                   <Input
                     {...register("imageUrl", { required: true })}
                     isDisabled={isSubmitting}
@@ -186,7 +188,7 @@ export default function NewCampaign() {
                 <Stack spacing={10}>
                   {wallet.status === "connected" ? (
                     <Button
-                      bg={"teal.400"}
+                      bg={"teal.500"}
                       color={"white"}
                       _hover={{
                         bg: "teal.500",
@@ -194,7 +196,7 @@ export default function NewCampaign() {
                       isLoading={isSubmitting}
                       type="submit"
                     >
-                      Create
+                      Create Campaign
                     </Button>
                   ) : (
                     <Stack spacing={3}>

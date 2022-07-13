@@ -17,7 +17,6 @@ import {
 import { useWallet } from "use-wallet";
 
 import NextLink from "next/link";
-import DarkModeSwitch from "./DarkModeSwitch";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export default function NavBar() {
@@ -69,7 +68,6 @@ export default function NavBar() {
                   bottom: 0,
                   w: "full",
                   h: "30%",
-                  bg: useColorModeValue("teal.100", "teal.900"),
                   zIndex: -1,
                 }}
               >
@@ -122,13 +120,7 @@ export default function NavBar() {
                 </Button>
               </div>
             )}
-
-            <DarkModeSwitch />
           </Stack>
-
-          <Flex display={{ base: "flex", md: "none" }}>
-            <DarkModeSwitch />
-          </Flex>
         </Container>
       </Flex>
     </Box>

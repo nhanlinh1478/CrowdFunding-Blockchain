@@ -168,9 +168,7 @@ export default function CampaignSingle({
               py={{ base: 6 }}
             >
               <Alert status="success" mt="2">
-                <AlertIcon />
                 <AlertDescription mr={2}>
-                  {" "}
                   Thank You for your Contribution
                 </AlertDescription>
                 <CloseButton
@@ -408,7 +406,7 @@ export default function CampaignSingle({
                 </NextLink>
                 <Text fontSize={"sm"}>
                   * You can see where these funds are being used & if you have
-                  contributed you can also approve those Withdrawal Requests :)
+                  contributed you can also approve those Withdrawal Requests.
                 </Text>
               </Stack>
             </Stack>

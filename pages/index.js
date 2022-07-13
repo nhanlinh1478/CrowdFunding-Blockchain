@@ -105,15 +105,7 @@ function CampaignCard({
               color={useColorModeValue("gray.800", "white")}
               fontSize={"1.2em"}
             >
-              <chakra.a display={"flex"}>
-                <Icon
-                  as={FaHandshake}
-                  h={7}
-                  w={7}
-                  alignSelf={"center"}
-                  color={"teal.400"}
-                />{" "}
-              </chakra.a>
+              <chakra.a display={"flex"}></chakra.a>
             </Tooltip>
           </Flex>
           <Flex alignContent="center" py={2}>
@@ -154,8 +146,7 @@ function CampaignCard({
               </Box>
 
               <Text fontSize={"md"} fontWeight="normal">
-                target of {web3.utils.fromWei(target, "ether")} ETH ($
-                {getWEIPriceInUSD(ethPrice, target)})
+                Target of {web3.utils.fromWei(target, "ether")} ETH
               </Text>
               <Progress
                 colorScheme="teal"
@@ -203,9 +194,8 @@ export default function Home({ campaigns }) {
       <main className={styles.main}>
         <Container py={{ base: "4", md: "12" }} maxW={"7xl"}>
           <HStack spacing={2}>
-            <SkeletonCircle size="4" />
             <Heading as="h2" size="lg">
-              Open Campaigns
+              Campaigns
             </Heading>
           </HStack>
 
@@ -231,11 +221,11 @@ export default function Home({ campaigns }) {
               })}
             </SimpleGrid>
           ) : (
-            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} py={8}>
-              <Skeleton height="25rem" />
-              <Skeleton height="25rem" />
-              <Skeleton height="25rem" />
-            </SimpleGrid>
+            <SimpleGrid
+              columns={{ base: 1, md: 3 }}
+              spacing={10}
+              py={8}
+            ></SimpleGrid>
           )}
         </Container>
       </main>
